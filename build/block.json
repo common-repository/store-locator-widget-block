@@ -1,0 +1,99 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "woosmap/store-locator-widget-block",
+  "version": "0.1.0",
+  "title": "Woosmap Store Locator Widget Block",
+  "category": "widgets",
+  "keywords": [
+    "Woosmap",
+    "Store Locator",
+    "Store Finder",
+    "Map"
+  ],
+  "description": "Easily display your stores on a Map using Woosmap platform",
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true
+    },
+    "html": false,
+    "multiple": false
+  },
+  "attributes": {
+    "height": {
+      "type": "string",
+      "default": "500"
+    },
+    "apiKey": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "object",
+      "properties": {
+        "primary_color": {
+          "type": "string",
+          "default": "#000"
+        }
+      },
+      "default": {
+        "primary_color": "#000"
+      }
+    },
+    "internationalization": {
+      "type": "object",
+      "default": {
+        "lang": "en",
+        "unitSystem": 0
+      }
+    },
+    "woosmapView": {
+      "type": "object",
+      "default": {
+        "breakPoint": 10,
+        "tileStyle": {
+          "color": "#000",
+          "size": 11,
+          "minSize": 5
+        },
+        "initialCenter": {
+          "lat": 50,
+          "lng": 0
+        },
+        "initialZoom": 6
+      }
+    },
+    "maps": {
+      "type": "object",
+      "default": {
+        "provider": "woosmap",
+        "localities": {
+          "types": [
+            "locality",
+            "postal_code",
+            "address",
+            "admin_level",
+            "country"
+          ]
+        }
+      }
+    },
+    "filters": {
+      "type": "object"
+    },
+    "initialSearch": {
+      "type": "object"
+    },
+    "datasource": {
+      "type": "object"
+    }
+  },
+  "textdomain": "store-locator-widget-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
